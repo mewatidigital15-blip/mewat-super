@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>Mewat Super — मेवाती म्यूजिक</title>
+<link rel="manifest" href="manifest.json">
+<style>
+:root{--bg:#0d0d12;--panel:#181820;--panel2:#22222c;--text:#f7f7fb;--muted:#a6a6b5;--accent:#ffbd35;--line:#30303b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#272035 0,#0d0d12 48%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+header{padding:22px 16px 16px;max-width:1000px;margin:auto}.brand{display:flex;align-items:center;gap:12px}.logo{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#ffcf53,#ff6a35);display:grid;place-items:center;font-size:27px;box-shadow:0 8px 28px #ff8b3430}.brand h1{font-size:25px;margin:0;font-weight:850;letter-spacing:.2px}.brand p{margin:3px 0 0;color:var(--muted);font-size:13px}
+main{max-width:1000px;margin:auto;padding:0 16px 38px}.hero{padding:22px 20px;border:1px solid #ffffff14;border-radius:24px;background:linear-gradient(125deg,#292033,#171720 65%);margin:10px 0 20px}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:1.4px}.hero h2{font-size:clamp(25px,6vw,39px);line-height:1.12;margin:9px 0}.hero p{color:#c8c6d1;max-width:600px;margin:0 0 17px}.search{display:flex;gap:8px;flex-wrap:wrap}.search input{flex:1;min-width:170px;padding:14px 15px;border:1px solid var(--line);border-radius:13px;background:#101016;color:white;font-size:15px;outline:none}.btn{border:0;border-radius:13px;background:var(--accent);color:#17130a;font-weight:800;padding:13px 16px;cursor:pointer;font-size:14px}.btn.secondary{background:var(--panel2);color:white;border:1px solid var(--line)}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px 0 12px}.sectionhead h3{margin:0;font-size:18px}.hint{font-size:12px;color:var(--muted)}.quick{display:flex;gap:8px;overflow:auto;padding-bottom:4px}.chip{white-space:nowrap;border:1px solid var(--line);background:#181820;color:#eee;border-radius:999px;padding:9px 13px;cursor:pointer}.layout{display:grid;grid-template-columns:1fr;gap:16px}.panel{background:#17171f;border:1px solid #ffffff12;border-radius:20px;padding:16px;min-width:0}.panel h3{margin:0 0 12px;font-size:17px}.empty{padding:22px 14px;text-align:center;color:var(--muted);background:#101016;border:1px dashed var(--line);border-radius:14px;font-size:14px}.tracklist{display:grid;gap:8px}.track{display:flex;align-items:center;gap:12px;padding:10px;border-radius:14px;background:#20202a}.trackicon{width:44px;height:44px;flex:0 0 44px;border-radius:12px;background:linear-gradient(135deg,#343044,#5c3827);display:grid;place-items:center;font-size:21px}.trackinfo{flex:1;min-width:0}.trackinfo b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}.trackinfo span{font-size:12px;color:var(--muted)}.track button{padding:9px 11px;border-radius:10px}.player{margin-top:14px}.player iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:14px;background:#000}.playernote{color:var(--muted);font-size:12px;margin:8px 2px 0}.addrow{display:grid;gap:8px}.addrow input{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:#101016;color:white;font-size:14px}.footer{padding:24px 0;color:#898997;text-align:center;font-size:12px}.note{font-size:12px;line-height:1.55;color:var(--muted);margin-top:12px}.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#f5f5f5;color:#111;padding:11px 16px;border-radius:12px;font-size:13px;display:none;box-shadow:0 8px 30px #0008;max-width:90%;z-index:9}
+@media(min-width:760px){header{padding-top:30px}.layout{grid-template-columns:1.05fr .95fr}.hero{padding:28px}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">♫</div><div><h1>Mewat Super</h1><p>मेवाती गानों का अपना अड्डा</p></div></div></header>
+<main>
+<section class="hero">
+<div class="eyebrow">MEWATI MUSIC • HARYANVI • REGIONAL</div>
+<h2>अपना गाना खोजो,<br>म्यूजिक का मज़ा लो।</h2>
+<p>मेवाती और हरियाणवी गाने खोजें। वीडियो YouTube के आधिकारिक प्लेयर में चलेंगे।</p>
+<form class="search" id="searchForm"><input id="searchInput" placeholder="गाने या सिंगर का नाम लिखें…" aria-label="गाना खोजें"><button class="btn" type="submit">YouTube पर खोजें ↗</button></form>
+</section>
+<div class="sectionhead"><h3>जल्दी खोजें</h3><span class="hint">किसी नाम पर टैप करें</span></div>
+<div class="quick" id="quick">
+<button class="chip" data-q="New Mewati Song 2026">New Mewati</button><button class="chip" data-q="Aslam Singer Mewati">Aslam Singer</button><button class="chip" data-q="Mewati sad song">गम भरे गाने</button><button class="chip" data-q="Haryanvi song">हरियाणवी</button><button class="chip" data-q="Mewati folk song">मेवाती लोकगीत</button>
+</div>
+<div class="layout">
+<section class="panel">
+<h3>▶ अभी सुनें</h3>
+<div id="player" class="player"><div class="empty">YouTube पर कोई गाना खोजें या नीचे अपना YouTube लिंक जोड़ें।</div></div>
+<p class="playernote">वीडियो YouTube के प्लेयर में चलता है। उपलब्धता और विज्ञापन YouTube के नियमों पर निर्भर हैं।</p>
+</section>
+<section class="panel">
+<h3>♫ मेरी गानों की लिस्ट</h3>
+<div id="tracks" class="tracklist"><div class="empty">अभी कोई गाना नहीं जोड़ा गया। नीचे YouTube वीडियो लिंक डालकर अपनी लिस्ट बनाएँ।</div></div>
+<div class="sectionhead"><h3>गाना जोड़ें</h3></div>
+<form id="addForm" class="addrow">
+<input id="songTitle" placeholder="गाने का नाम (जैसे: Mewati Song)" required>
+<input id="songUrl" type="url" placeholder="YouTube वीडियो लिंक (https://...)" required>
+<button class="btn" type="submit">+ लिस्ट में जोड़ें</button>
+</form>
+<p class="note">लिस्ट इसी ब्राउज़र में सेव रहती है। यह ऐप YouTube से गाने डाउनलोड नहीं करती और न ही YouTube की पाबंदियों को हटाती है। केवल ऐसे वीडियो जोड़ें जिन्हें दिखाने की अनुमति हो।</p>
+</section>
+</div>
+<div class="footer">Mewat Super © <span id="year"></span> · बनाया गया मेवाती म्यूजिक प्रेमियों के लिए</div>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);
+const STORAGE='mewat-super-tracks-v1';
+let tracks=[];
+try{tracks=JSON.parse(localStorage.getItem(STORAGE)||'[]')}catch(e){tracks=[]}
+function toast(msg){$('toast').textContent=msg;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',2300)}
+function videoId(url){try{const u=new URL(url);if(u.hostname.includes('youtu.be'))return u.pathname.slice(1).split('/')[0];if(u.hostname.includes('youtube.com')||u.hostname.includes('youtube-nocookie.com')){if(u.pathname==='/watch')return u.searchParams.get('v');if(u.pathname.startsWith('/embed/'))return u.pathname.split('/')[2];if(u.pathname.startsWith('/shorts/'))return u.pathname.split('/')[2]}return null}catch(e){return null}}
+function playTrack(t){const id=videoId(t.url);if(!id){toast('यह YouTube वीडियो लिंक सही नहीं लग रहा।');return}$('player').innerHTML='';const frame=document.createElement('iframe');frame.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id);frame.title=t.title;frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.allowFullscreen=true; $('player').appendChild(frame);document.querySelector('.player').scrollIntoView({behavior:'smooth',block:'nearest'})}
+function render(){const box=$('tracks');box.innerHTML='';if(!tracks.length){box.innerHTML='<div class="empty">अभी कोई गाना नहीं जोड़ा गया। नीचे YouTube वीडियो लिंक डालकर अपनी लिस्ट बनाएँ।</div>';return}tracks.forEach((t,i)=>{const row=document.createElement('div');row.className='track';const ico=document.createElement('div');ico.className='trackicon';ico.textContent='♫';const info=document.createElement('div');info.className='trackinfo';const b=document.createElement('b');b.textContent=t.title;const s=document.createElement('span');s.textContent='YouTube वीडियो';info.append(b,s);const p=document.createElement('button');p.className='btn';p.textContent='चलाएँ';p.onclick=()=>playTrack(t);const d=document.createElement('button');d.className='btn secondary';d.textContent='✕';d.setAttribute('aria-label','लिस्ट से हटाएँ');d.onclick=()=>{tracks.splice(i,1);save();render()};row.append(ico,info,p,d);box.appendChild(row)})}
+function save(){localStorage.setItem(STORAGE,JSON.stringify(tracks))}
+$('searchForm').addEventListener('submit',e=>{e.preventDefault();const q=$('searchInput').value.trim();if(!q){toast('पहले गाने या सिंगर का नाम लिखें।');return}window.open('https://www.youtube.com/results?search_query='+encodeURIComponent(q+' Mewati song'),'_blank','noopener')});
+$('quick').addEventListener('click',e=>{const b=e.target.closest('button[data-q]');if(!b)return;$('searchInput').value=b.dataset.q;$('searchForm').requestSubmit()});
+$('addForm').addEventListener('submit',e=>{e.preventDefault();const title=$('songTitle').value.trim(),url=$('songUrl').value.trim();if(!videoId(url)){toast('कृपया सही YouTube वीडियो लिंक डालें।');return}if(tracks.some(t=>t.url===url)){toast('यह गाना पहले से लिस्ट में है।');return}tracks.unshift({title,url});save();render();$('songTitle').value='';$('songUrl').value='';toast('गाना आपकी लिस्ट में जुड़ गया।')});
+$('year').textContent=new Date().getFullYear();render();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script>
+</body>
+</html>
